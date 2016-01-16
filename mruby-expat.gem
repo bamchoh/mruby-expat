@@ -1,0 +1,6 @@
+name: mruby-expat
+description: Expat class
+author: bamchoh
+website: https://github.com/bamchoh/mruby-expat
+protocol: git
+repository: https://github.com/bamchoh/mruby-expat.git
