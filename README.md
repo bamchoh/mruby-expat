@@ -13,13 +13,44 @@ end
 ```
 ## example
 ```ruby
-p Expat.hi
-#=> "hi!!"
-t = Expat.new "hello"
-p t.hello
-#=> "hello"
-p t.bye
-#=> "hello bye"
+root = XmlParser.parse('
+<root>
+  <nodes counts="3">
+    <node id="1">a</node>
+    <node id="2">b</node>
+    <node id="3">c</node>
+  </nodes>
+</root>')
+
+p root.name #=> "root"
+
+#
+# find method for example
+#
+nodes = root.find("nodes")
+p nodes.name #=> "nodes"
+p nodes.attributes #=> {"counts" => "3"}
+
+nodes.children.each do |child|
+  p child.name #=> "node"
+end
+
+#
+# find_all method for example
+#
+elems = root.find_all("node")
+elems.each do |elem|
+  p elem.name #=> "node"
+  p elem.text #=> "a", "b", "c"
+end
+
+#
+# find method with node and attributes
+#
+node = root.find("node", {"id"=>"2"})
+p node.name #=> "node"
+p node.attributes #=> {"id"=>"2"}
+p node.text #=> "b"
 ```
 
 ## License
