@@ -1,4 +1,4 @@
-# mruby-expat   [![Build Status](https://travis-ci.org/bamchoh/mruby-expat.png?branch=master)](https://travis-ci.org/bamchoh/mruby-expat)
+# mruby-expat   [![Build Status](https://travis-ci.org/bamchoh/mruby-expat.png?branch=master)](https://travis-ci.org/bamchoh/mruby-expat) [![Gitter](https://badges.gitter.im/bamchoh/mruby-expat.svg)](https://gitter.im/bamchoh/mruby-expat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 XML Parser module for mruby using Expat that is XML Parser library by C. You can parse XML text from mruby application by using this module.
 
 ## install by mrbgems
