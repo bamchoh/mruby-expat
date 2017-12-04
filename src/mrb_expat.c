@@ -162,7 +162,7 @@ static mrb_value mrb_expat_parse(mrb_state *mrb, mrb_value self)
   } while (!done);
   XML_ParserFree(parser);
 
-  return mrb_funcall(mrb, self, "root", 0);
+  return mrb_iv_get(mrb, self, mrb_intern_lit(mrb, "@root"));
 }
 
 void mrb_mruby_expat_gem_init(mrb_state *mrb)
